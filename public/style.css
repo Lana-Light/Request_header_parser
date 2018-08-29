@@ -1,10 +1,8 @@
-/****** Main Styling ******/
-
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	color: #222;
-	background-color: #FaFaFa;
+	color: #131;
+	background-color: #effffe;
 	text-align: center;
 	line-height: 1.4em;
 }
@@ -32,7 +30,7 @@ code {
   font-family: monospace;
   padding: 2px;
   color: black;
-  background-color: #fff;
+  background-color: #ccffff;
 }
 ol {
 	list-style-position: outside;
@@ -50,4 +48,7 @@ li {
 
 a {
 	color: #2574A9;
+}
+a:hover {
+  color: #00aadd;
 }

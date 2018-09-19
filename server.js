@@ -16,12 +16,16 @@ app.use(express.static('public'));
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
-  var ip = req.header("X-Forwarded-For").split(",")[0];
-  console.log(ip);
+});
+
+
+// your first API endpoint... 
+app.get("/api/hello", function (req, res) {
+  res.json({greeting: 'hello API'});
 });
 
 app.get("/api/whoami", function(req, res) {
-  res.json({ipadress: req.header("X-Forwarded-For").split(",")[0], language: req.header("Accept-Language"), software: req.header("User-Agent")});
+  res.json({ipaddress: req.header("X-Forwarded-For").split(",")[0], language: req.header("Accept-Language"), software: req.header("User-Agent")});
 });
 
 // listen for requests :)
